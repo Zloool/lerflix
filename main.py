@@ -23,9 +23,9 @@ def pccheck(context):
     # pc = PostCardUser(pclogin, pcpass)
     number = get_tasks(pclogin, pcpass) #pc.loginToPC()
     job = context.job
-    logger.info("Returned number: %s" % number)
+    logger.info("Tasks number: %s" % number)
 
-    if(listnumber == number):
+    if(listnumber != number):
         context.bot.sendMessage(job.context, text='You have currently ' + number +
                         ' unsed mails!')
         listnumber = number
@@ -67,6 +67,7 @@ def getpassword(bot, update):
 
     # pc = PostCardUser(pclogin, pcpass)
     number = get_tasks(pclogin, pcpass) # pc.loginToPC()
+    logger.info("Tasks number: %s" % number)
     if number:
         bot.message.reply_text('You have currently ' + number + ' unsed mails!')
     else:

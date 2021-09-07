@@ -14,7 +14,8 @@ def get_tasks(username, password):
 
     driver = uc.Chrome()
     # driver = webdriver.Chrome(r'D:\chromedriver.exe', chrome_options=chrome_options)
-    driver.maximize_window()
+    driver.manage().window().minimize()
+    #driver.maximize_window()
     driver.implicitly_wait(5)
     driver.get(url)
     # assert "Selenium Easy Demo - Simple Form to Automate using Selenium" in driver.title
