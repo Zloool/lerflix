@@ -22,6 +22,7 @@ def pccheck(context):
     global listnumber
     # pc = PostCardUser(pclogin, pcpass)
     number = get_tasks(pclogin, pcpass) #pc.loginToPC()
+    job = context.job
     logger.info("Returned number: %s" % number)
 
     if(listnumber == number):
