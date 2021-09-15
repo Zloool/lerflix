@@ -4,9 +4,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver.v2 as uc
-from settings import url
+from settings import url, username, password
 
-def get_tasks(username, password):
+def get_tasks():
     # PROXY = "localhost:8080"
     # chrome_options = webdriver.ChromeOptions()
     # chrome_options.add_argument('--proxy-server=%s' % PROXY)
