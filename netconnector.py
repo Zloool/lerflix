@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import undetected_chromedriver.v2 as uc
-from settings import url, username, password
+from settings import url, username, password, c_pid ,c_uid, c_bid, c_b2id
 
 def get_tasks():
     # PROXY = "localhost:8080"
@@ -20,19 +20,20 @@ def get_tasks():
     driver.get(url)
     # assert "Selenium Easy Demo - Simple Form to Automate using Selenium" in driver.title
 
-    eleUserMessage = driver.find_element_by_id("username")
+    eleUserMessage = driver.find_element_by_id(c_uid)
     eleUserMessage.click()
-    # sleep(1000)
     eleUserMessage.send_keys(username)
-    # sleep(1000)
-    eleUserMessage = driver.find_element_by_id("password")
+    
+    eleUserMessage = driver.find_element_by_id(c_bid)
     eleUserMessage.click()
     # sleep(1000)
+    eleUserMessage = driver.find_element_by_id(c_pid)
+    eleUserMessage.click()
     eleUserMessage.send_keys(password)
     # sleep(1000)
 
 
-    eleUserMessage = driver.find_element_by_id("post-ok")
+    eleUserMessage = driver.find_element_by_id(c_b2id)
     eleUserMessage.click()
 
     wait = WebDriverWait(driver, 30)
