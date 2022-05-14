@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import logging
 from random import randrange
 from telegram import Update
