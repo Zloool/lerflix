@@ -1,4 +1,4 @@
-from selenium import webdriver
+# from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -11,8 +11,10 @@ def get_tasks():
     # chrome_options = webdriver.ChromeOptions()
     # chrome_options.add_argument('--proxy-server=%s' % PROXY)
     # chrome_options.add_argument("user-agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'")
+    # options = uc.ChromeOptions()
+    # options.add_argument("headless");
 
-    driver = uc.Chrome()
+    driver = uc.Chrome() # options)
     # driver = webdriver.Chrome(r'D:\chromedriver.exe', chrome_options=chrome_options)
     # driver.manage().window().minimize()
     driver.maximize_window()
